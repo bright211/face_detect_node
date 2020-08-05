@@ -2,14 +2,9 @@
 
 const express = require("express");
 const router = express.Router();
-var multer = require("multer");
-const path = require("path");
-const fs = require("fs");
-const base64Img = require("base64-img");
-const atob = require("atob");
-const PORT = process.env.PORT;
+
 var AWS = require("aws-sdk");
-var Blob = require("blob");
+
 
 //AWS access details
 console.log(AWS.config.region);

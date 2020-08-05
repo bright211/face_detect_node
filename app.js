@@ -3,9 +3,9 @@
 const express = require("express");
 const dotenv = require("dotenv").config();
 const bodyParser = require("body-parser");
-const { exp } = require("@tensorflow/tfjs-core");
+
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 // app.use(bodyParser.json());
 
