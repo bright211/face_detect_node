@@ -52,18 +52,7 @@ router.post("/upload", function (req, res) {
   });
 });
 
-function getBinary(base64Image) {
-  var binaryImg = atob(base64Image);
 
-  var length = binaryImg.length;
-  var ab = new ArrayBuffer(length);
-  var ua = new Uint8Array(ab);
-  for (var i = 0; i < length; i++) {
-    ua[i] = binaryImg.charCodeAt(i);
-  }
-
-  return ab;
-}
 
 router.post("/match", async function (req, res) {
   const { originName, targetName } = req.body;
